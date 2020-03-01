@@ -1,6 +1,6 @@
 # vscode-theme-change-detector
 
-## Setup
+## Setup and Run
 
 ### Environment variables
 
