@@ -2,6 +2,12 @@
 
 ## Setup
 
+### Environment variables
+
+See [.env.example](./.env.example)
+
+### Run on Docker
+
 It is recommended to create volume and mount to `/work`.
 
 ```
