@@ -13,20 +13,20 @@ cd vscode
 
 git fetch
 
-if ! (git diff --exit-code --quiet $VSCODE_DETECTOR_REV origin/master extensions/theme-defaults/themes/dark_defaults.json &&
-  git diff --exit-code --quiet $VSCODE_DETECTOR_REV origin/master extensions/theme-monokai/themes/monokai-color-theme.json) ; then
+if ! (git diff --exit-code --quiet $VSCODE_DETECTOR_REV origin/main extensions/theme-defaults/themes/dark_defaults.json &&
+  git diff --exit-code --quiet $VSCODE_DETECTOR_REV origin/main extensions/theme-monokai/themes/monokai-color-theme.json) ; then
   echo "Changed!!"
 
-  default_diff=`git diff $VSCODE_DETECTOR_REV origin/master extensions/theme-defaults/themes/dark_defaults.json`
-  monokai_diff=`git diff $VSCODE_DETECTOR_REV origin/master extensions/theme-monokai/themes/monokai-color-theme.json`
+  default_diff=`git diff $VSCODE_DETECTOR_REV origin/main extensions/theme-defaults/themes/dark_defaults.json`
+  monokai_diff=`git diff $VSCODE_DETECTOR_REV origin/main extensions/theme-monokai/themes/monokai-color-theme.json`
 
   text=$(cat <<EOF
 VSCode change detected!
-- https://github.com/Microsoft/vscode/blob/master/extensions/theme-defaults/themes/dark_defaults.json
+- https://github.com/Microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_defaults.json
 \`\`\`
 $default_diff
 \`\`\`
-- https://github.com/Microsoft/vscode/blob/master/extensions/theme-monokai/themes/monokai-color-theme.json
+- https://github.com/Microsoft/vscode/blob/main/extensions/theme-monokai/themes/monokai-color-theme.json
 \`\`\`
 $monokai_diff
 \`\`\`
